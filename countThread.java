@@ -14,13 +14,14 @@ public class countThread extends Thread{
 		for(Thread t: listThreads){
 			t.join();
 		}
-		System.out.println(count.get());
+		System.out.println("hi "+count.get());
 	}
 	public void run(){
 		while(true){
 			int n = count.get();
 			if(n >goal) break;
 			count.incrementAndGet();
+
 		}
 	}
 
